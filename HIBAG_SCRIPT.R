@@ -20,7 +20,7 @@ pred_hibag=function(hla, yourgeno, model.list){
 }
 
 output_pred_QC=lapply(hlas_id, pred_hibag,  yourgeno = yourgeno, model.list = model.list)
-names(output_pred_QC) = hlas_id[4]
+names(output_pred_QC) = hlas_id
 
 
 hibag_extract=function(hla.num, output_pred_QC, filename){
