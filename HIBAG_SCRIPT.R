@@ -26,8 +26,8 @@ names(output_pred_QC) = hlas_id
 
 #'''write to current dir function to wrap in a lapply call'''
 hibag_extract=function(hla.num, output_pred_QC, filename){
-  fwrite(output_pred_QC[[hla.num]]$value, file = paste0('IMPUTED_', output_pred_QC[[hla.num]]$locus, filename, ".txt"), row.names = T)
-  fwrite(as.data.frame(output_pred_QC[[hla.num]]$postprob), file= paste0('POSTERIORS_', output_pred_QC[[hla.num]]$locus, filename, ".txt"), row.names = T)
+  fwrite(output_pred_QC[[hla.num]]$value, file = paste0('IMPUTED_', output_pred_QC[[hla.num]]$locus, "_", filename, ".txt"), row.names = T)
+  fwrite(as.data.frame(output_pred_QC[[hla.num]]$postprob), file= paste0('POSTERIORS_', output_pred_QC[[hla.num]]$locus, "_",filename, ".txt"), row.names = T)
 
 }
 
