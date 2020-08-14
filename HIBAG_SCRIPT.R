@@ -8,8 +8,6 @@ sink(paste0(arg[3], '.log'))
 PackList = rownames(installed.packages())
 if('data.table' %in%  PackList & 'parallel' %in% PackList){
   require(data.table)
-  require(ggplot2)
-  require(stringr)
 } else {
   install.packages('data.table')
 }
